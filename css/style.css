@@ -1,0 +1,1009 @@
+                            * {
+                                box-sizing: border-box;
+                                padding: 0%;
+                                margin: 0%;
+                                font-family: "open sans";
+                            }
+                            
+                             :root {
+                                --main: #19c8fa
+                            }
+                            
+                            html {
+                                scroll-behavior: smooth;
+                                background-color: rgb(255, 255, 255);
+                            }
+                            
+                            ul {
+                                list-style: none;
+                            }
+                            
+                            .container {
+                                margin: 0 auto;
+                                padding-left: 15px;
+                                padding-right: 15px;
+                                display: flex;
+                                min-height: 97px;
+                            }
+                            
+                            @media (min-width:786px) {
+                                .container {
+                                    width: 750px;
+                                }
+                            }
+                            
+                            @media (min-width:992px) {
+                                .container {
+                                    width: 900px;
+                                }
+                            }
+                            
+                            @media (min-width:1200px) {
+                                .container {
+                                    width: 1120px;
+                                }
+                            }
+                            /*header*/
+                            
+                            header .container {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                position: relative;
+                                z-index: 6;
+                            }
+                            
+                            header .container::before {
+                                content: "";
+                                height: 1px;
+                                width: calc(100% - 30PX);
+                                position: absolute;
+                                background-color: #a2a2a2;
+                                bottom: 0%;
+                            }
+                            
+                            header IMG {
+                                height: 50PX;
+                                z-index: 6;
+                            }
+                            
+                            header nav .toggle-menu {
+                                color: white;
+                                font-size: 22px;
+                            }
+                            
+                            @media (min-width: 768px) {
+                                header nav .toggle-menu {
+                                    display: none;
+                                }
+                            }
+                            
+                            .Portfolio UL,
+                            header nav ul {
+                                display: flex;
+                                align-items: center;
+                                justify-content: end;
+                                flex: 1;
+                            }
+                            
+                            header nav .toggle-menu:hover+ul {
+                                display: flex;
+                                flex-direction: column;
+                                position: absolute;
+                                left: 0;
+                                top: 100%;
+                                width: 100%;
+                                align-items: flex-start;
+                                text-indent: 20px;
+                                background-color: rgb(0 0 0/.5);
+                            }
+                            
+                            header nav ul li a {
+                                display: block;
+                                color: white;
+                                text-decoration: none;
+                                padding: 30px 10px;
+                                transition: .3s;
+                                position: relative;
+                                z-index: 3;
+                            }
+                            
+                            header nav ul li a.active,
+                            header nav ul li a:hover {
+                                color: var(--main);
+                                border-bottom: 2px solid var(--main);
+                            }
+                            
+                            @media (max-width: 767px) {
+                                header nav ul {
+                                    display: none;
+                                }
+                                nav .form {
+                                    transform: translateX(-30px);
+                                }
+                                html {
+                                    overflow-x: hidden;
+                                }
+                                .home:first-of-type {
+                                    color: rgb(5, 171, 212);
+                                    border-bottom: 1px solid rgb(5, 171, 212);
+                                }
+                                header nav li {
+                                    width: 300px;
+                                }
+                            }
+                            
+                            header .form {
+                                width: 40px;
+                                height: 30px;
+                                position: relative;
+                                margin-left: 40px;
+                                padding: 7px;
+                                border-left: 1px solid white;
+                                color: white;
+                            }
+                            
+                            nav {
+                                display: flex;
+                                align-items: center;
+                            }
+                            /*header*/
+                            
+                            .bg {
+                                background-image: url("../IMAGES/landing.webp");
+                                background-size: cover;
+                                position: 100% fixed;
+                                font-family: 'open sans';
+                                scroll-margin: none;
+                            }
+                            
+                            .brightn {
+                                filter: brightness(.64);
+                                position: 100% fixed;
+                                width: 100%;
+                                height: 600px;
+                                background-color: rgba(0, 0, 0, .5);
+                                top: -100px;
+                                transform: translatey(-200px);
+                                z-index: -4;
+                            }
+                            
+                            .landing::after {
+                                content: "";
+                                background-color: #15667C;
+                                width: 500px;
+                                height: 400px;
+                                position: absolute;
+                                z-index: -1;
+                                top: 10%;
+                                opacity: .6;
+                                left: 0;
+                            }
+                            
+                            .landing {
+                                padding: 30px;
+                                font-weight: 100;
+                                color: white;
+                                top: 10px;
+                                width: 500px;
+                                height: 400px;
+                                position: absolute;
+                                padding: 60px;
+                                z-index: 3;
+                            }
+                            
+                            .landing p {
+                                line-height: 30px;
+                                font-size: small;
+                            }
+                            
+                            .landing h1 {
+                                font-weight: 400;
+                            }
+                            
+                            .circles2 div,
+                            .landing .circles div {
+                                border-radius: 50%;
+                                width: 20px;
+                                height: 20px;
+                                margin: 5px;
+                                background-color: transparent;
+                                border: 1px solid rgba(0, 0, 0, 0.594);
+                                transform: translate(400px, 100px);
+                            }
+                            
+                            .landing .circles,
+                            .circles2 {
+                                display: flex;
+                            }
+                            
+                            .circles2 div:nth-child(2),
+                            .landing .circles div:nth-child(2) {
+                                background-color: aqua;
+                            }
+                            
+                            .arrow,
+                            .arrow2 {
+                                color: white;
+                                font-size: 3cap;
+                                position: absolute;
+                                z-index: 5;
+                                font-family: Arial, Helvetica, sans-serif;
+                                margin-top: -420px;
+                                font-weight: 900;
+                                cursor: pointer;
+                            }
+                            
+                            .arrow {
+                                transform: rotate(90deg);
+                                left: 25px;
+                            }
+                            
+                            .arrow2 {
+                                transform: rotate(270deg);
+                                right: 25px;
+                            }
+                            
+                            .txt {
+                                margin: 20px auto;
+                                text-align: center;
+                            }
+                            
+                            .txt h2 {
+                                text-transform: uppercase;
+                                font-size: 4cap;
+                                font-weight: 200;
+                            }
+                            
+                            .services {
+                                background-color: white;
+                                width: 100%;
+                                height: 900px;
+                                margin-top: -300px;
+                                padding: 40px;
+                            }
+                            
+                            .txt .sep {
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 10px;
+                                border: 1px solid black;
+                                margin: 10px auto;
+                                position: relative;
+                                margin-bottom: 60px;
+                            }
+                            
+                            .txt .sep::after {
+                                content: "";
+                                width: 60px;
+                                position: absolute;
+                                right: 19px;
+                                height: 1px;
+                                background-color: black;
+                                top: 50%;
+                            }
+                            
+                            .txt .sep::before {
+                                content: "";
+                                width: 60px;
+                                position: absolute;
+                                left: 19px;
+                                height: 1px;
+                                background-color: black;
+                                top: 50%;
+                            }
+                            
+                            .grid p,
+                            .txt p {
+                                color: rgb(128, 126, 126);
+                                word-spacing: 4px;
+                                line-height: 30px;
+                            }
+                            
+                            .grid {
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                width: 90%;
+                                margin: 100px auto;
+                                text-align: start;
+                                gap: 60px;
+                            }
+                            
+                            .grid i {
+                                color: black;
+                                font-size: 4cap;
+                                transform: translateY(40px);
+                            }
+                            
+                            .grid h4 {
+                                color: rgb(62, 178, 224);
+                                margin: 20px 0;
+                                font-size: 1.6cap;
+                                display: inline-block;
+                            }
+                            
+                            .grid>div {
+                                display: grid;
+                                grid-template-columns: 100px 300px;
+                            }
+                            
+                            .design {
+                                background-image: url("../IMAGES/design-features.webp");
+                                width: 100%;
+                                height: 500px;
+                            }
+                            
+                            .brig::before {
+                                content: "";
+                                width: 100%;
+                                height: 500px;
+                                background-color: rgba(0, 0, 0, .5);
+                                position: absolute;
+                                z-index: 2;
+                            }
+                            
+                            .design {
+                                position: relative;
+                                overflow: hidden;
+                            }
+                            
+                            .landing2:after {
+                                z-index: 4;
+                                top: 50px;
+                                right: 0px;
+                                background-color: #15667C;
+                                width: 450px;
+                                height: 350px;
+                                position: absolute;
+                                z-index: 11;
+                                opacity: .6;
+                                content: "";
+                            }
+                            
+                            .content {
+                                color: white;
+                                z-index: 21;
+                                position: absolute;
+                                width: 450px;
+                                height: 350px;
+                                top: 50px;
+                                right: 0px;
+                                padding: 30px;
+                            }
+                            
+                            .content div {
+                                margin: 30px;
+                            }
+                            
+                            .design img {
+                                bottom: -70px;
+                                left: 100px;
+                                position: absolute;
+                                height: 400px;
+                                z-index: 9;
+                            }
+                            
+                            .Portfolio {
+                                width: 100%;
+                                height: 1800px;
+                                background-color: white;
+                            }
+                            
+                            .Portfolio {
+                                padding: 30PX;
+                            }
+                            
+                            .Portfolio UL {
+                                justify-content: CENTER;
+                            }
+                            
+                            .Portfolio UL LI {
+                                padding: 10PX;
+                            }
+                            
+                            .Portfolio UL LI:first-child {
+                                background-color: rgb(88, 195, 249);
+                                color: white;
+                            }
+                            
+                            .Portfolio .grid2 {
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                margin: 40px -30px;
+                                background-color: white;
+                            }
+                            
+                            .Portfolio .grid2 img {
+                                height: 330px;
+                                transition: .3s;
+                            }
+                            
+                            .Portfolio .grid2 div:hover img {
+                                transform: matrix(1.1, .10, -.1, 1.1, 0, 0);
+                            }
+                            
+                            .Portfolio .grid2 div:hover .des {
+                                display: block;
+                                height: 100px;
+                            }
+                            
+                            .Portfolio .grid2 div {
+                                overflow: hidden;
+                                position: relative;
+                            }
+                            
+                            .Portfolio .grid2 .des {
+                                position: absolute;
+                                backdrop-filter: blur(8px);
+                                width: 100%;
+                                bottom: 0;
+                                left: 0;
+                                padding: 10px;
+                                height: 0px;
+                                transition-duration: 1.63s;
+                            }
+                            
+                            .Portfolio .grid2 .des h5 {
+                                color: rgb(0, 208, 255);
+                                font-size: larger;
+                                margin: 10px;
+                            }
+                            
+                            .Portfolio button {
+                                background-color: rgb(0, 208, 255);
+                                color: white;
+                                padding: 10px 14px;
+                                margin: 10px 44%;
+                                border: none;
+                                border-radius: 4px;
+                            }
+                            
+                            .vid {
+                                height: 600px;
+                                margin-top: 100px;
+                                position: relative;
+                            }
+                            
+                            video {
+                                filter: brightness(.6);
+                            }
+                            
+                            .vid .vid-cont {
+                                position: absolute;
+                                width: 100%;
+                                background-color: rgba(34, 151, 172, 0.744);
+                                top: 30%;
+                                height: 200px;
+                                text-align: center;
+                                color: white;
+                            }
+                            
+                            .vid .vid-cont h3 {
+                                font-size: 3cap;
+                                font-weight: 200;
+                                margin: 20px;
+                            }
+                            
+                            .vid .vid-cont button {
+                                background-color: black;
+                                color: white;
+                                border-radius: 4px;
+                                padding: 4px 10px;
+                                margin: 15px;
+                                font-size: 2cap;
+                                text-transform: uppercase;
+                                box-shadow: 1px 2px 3px gray;
+                                border: none;
+                            }
+                            
+                            .about {
+                                position: relative;
+                                height: 400px;
+                            }
+                            
+                            .about img:first-of-type {
+                                position: absolute;
+                                top: 320px;
+                                left: 150px;
+                            }
+                            
+                            .about img:last-of-type {
+                                position: absolute;
+                                top: 500px;
+                                left: 0px;
+                                width: 100%;
+                                filter: brightness(.5);
+                                height: 400px;
+                            }
+                            
+                            .about .flex {
+                                position: absolute;
+                                top: 700px;
+                                z-index: 80;
+                                color: white;
+                                width: 90%;
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                background-color: #185476cf;
+                                margin: -100px 5%;
+                                padding: 30px;
+                            }
+                            
+                            .about .flex>div {
+                                padding: 30px;
+                            }
+                            
+                            .about .flex i {
+                                background-color: black;
+                                font-size: large;
+                                border-radius: 50%;
+                                width: 40px;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 10px 40px;
+                            }
+                            
+                            .about .flex .val {
+                                font-size: 4cap;
+                                margin: 20px 0px;
+                                font-weight: 700;
+                            }
+                            
+                            section {
+                                height: 700px;
+                                margin-top: 400px;
+                            }
+                            
+                            section .flex2 {
+                                color: black;
+                                margin-top: 500px;
+                                display: flex;
+                                justify-content: space-evenly;
+                                text-align: center;
+                                padding: 20px;
+                            }
+                            
+                            section .flex2 div {
+                                width: 400px;
+                            }
+                            
+                            section .flex2 div h3 {
+                                margin: 20px;
+                                text-transform: uppercase;
+                                font-weight: 400;
+                            }
+                            
+                            section .flex2 div P {
+                                color: gray;
+                            }
+                            
+                            section .GRID3 {
+                                transform: translateY(10px);
+                                display: grid;
+                                grid-template-columns: 1fr 300px 400px;
+                                width: 95%;
+                                line-height: 40px;
+                                column-gap: 50px;
+                            }
+                            
+                            section .GRID3 .images img {
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50px;
+                                display: block;
+                            }
+                            
+                            section .GRID3>div {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                gap: 12px
+                            }
+                            
+                            section .GRID3 h5 {
+                                color: gray;
+                                text-align: end;
+                                margin-right: 34px;
+                                font-weight: 100;
+                            }
+                            
+                            section .GRID3 div>h5 {
+                                border-bottom: #a2a2a2 1px solid;
+                            }
+                            
+                            section .GRID3 .third div {
+                                border-bottom: 25px solid rgba(128, 128, 128, 0.367);
+                                width: 100%;
+                                position: relative;
+                            }
+                            
+                            section .GRID3 .third {
+                                width: 100%;
+                            }
+                            
+                            .GRID3 .third>div::before {
+                                background-color: #19C8FA;
+                                position: absolute;
+                                height: 25px;
+                                z-index: 12;
+                                left: 0;
+                                content: "";
+                                top: 40px;
+                            }
+                            
+                            .value1::before,
+                            .value4::before {
+                                width: calc(400px * 9/10);
+                            }
+                            
+                            .value1 p,
+                            .value4 p {
+                                left: calc(400px * 9/10 - 10px)
+                            }
+                            
+                            .value2::before {
+                                width: calc(400px * .85);
+                            }
+                            
+                            .value2 p {
+                                left: calc(400px *.85 - 10px)
+                            }
+                            
+                            .value3::before {
+                                width: calc(400px * .8);
+                            }
+                            
+                            .value3 p {
+                                left: calc(400px *.8 - 10px)
+                            }
+                            
+                            .GRID3 .third p {
+                                position: absolute;
+                                top: -10px;
+                                background-color: black;
+                                color: white;
+                                font-size: medium;
+                                border-radius: 4px;
+                                height: 30px;
+                                width: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            
+                            .GRID3 .third p::after {
+                                content: "";
+                                position: absolute;
+                                bottom: -13px;
+                                width: 1px;
+                                height: 1px;
+                                border-style: solid;
+                                border-width: 8px;
+                                border-color: #000000 transparent transparent;
+                            }
+                            
+                            .circles2 {
+                                margin-left: -250px;
+                                position: absolute;
+                            }
+                            
+                            aside img {
+                                width: 100%;
+                                filter: brightness(.3);
+                                left: 0;
+                            }
+                            
+                            blockquote {
+                                position: absolute;
+                                color: rgb(255, 255, 255);
+                                top: 10px;
+                                z-index: 20;
+                                font-size: 3cap;
+                                margin-top: 180px;
+                            }
+                            
+                            aside div {
+                                position: relative;
+                            }
+                            
+                            .bq {
+                                text-align: center;
+                            }
+                            
+                            .pricing {
+                                display: grid;
+                                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                                gap: 30px;
+                                padding: 50px;
+                            }
+                            
+                            .card {
+                                text-align: center;
+                                border: 1px solid #ddd;
+                                padding: 30px 20px;
+                                transition: 0.3s;
+                                position: relative;
+                            }
+                            
+                            .card:hover {
+                                transform: translateY(-10px);
+                            }
+                            
+                            .card h3 {
+                                letter-spacing: 2px;
+                                margin-bottom: 20px;
+                            }
+                            
+                            .price {
+                                font-size: 40px;
+                                font-weight: bold;
+                                margin: 20px 0;
+                            }
+                            
+                            .price span {
+                                font-size: 14px;
+                                color: gray;
+                            }
+                            
+                            .pricing ul {
+                                list-style: none;
+                                padding: 0;
+                                margin: 20px 0;
+                            }
+                            
+                            .pricing ul li {
+                                padding: 15px 0;
+                                border-top: 1px solid #eee;
+                            }
+                            
+                            .pricing button {
+                                padding: 10px 25px;
+                                border: 1px solid #3498db;
+                                background: none;
+                                color: #3498db;
+                                cursor: pointer;
+                                transition: 0.3s;
+                            }
+                            
+                            .pricing button:hover {
+                                background: #3498db;
+                                color: white;
+                            }
+                            
+                            .pricing-intro {
+                                padding-top: 60px;
+                                padding-bottom: 60px;
+                                text-align: center;
+                            }
+                            
+                            .pricing-intro p {
+                                font-size: 20px;
+                                margin-bottom: 20px;
+                                color: #333;
+                                margin: auto;
+                            }
+                            
+                            .pricing-intro a {
+                                background-color: #19c8fa;
+                                color: white;
+                                padding: 10px;
+                                text-decoration: none;
+                                display: flex;
+                                height: 40px;
+                                align-items: center;
+                                margin-top: 40px;
+                            }
+                            
+                            .subscribe {
+                                padding-top: 100px;
+                                padding-bottom: 100px;
+                                background-image: url("../images/subscribe.webp");
+                                background-size: cover;
+                                position: relative;
+                                color: white;
+                                display: flex;
+                                align-items: center;
+                            }
+                            
+                            .subscribe::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgb(0 0 0 / 50%);
+                            }
+                            
+                            .subscribe form {
+                                display: flex;
+                                position: relative;
+                                width: 500px;
+                                max-width: 100%;
+                                border: 1px solid white;
+                            }
+                            
+                            .subscribe form i {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 20px;
+                            }
+                            
+                            .subscribe form input[type="email"] {
+                                border: none;
+                                background: none;
+                                padding: 20px 20px 20px 60px;
+                                color: white;
+                                width: calc(100% - 130px);
+                            }
+                            
+                            .subscribe form input[type="submit"] {
+                                width: 130px;
+                                background-color: #19c8fa;
+                                color: white;
+                                border: none;
+                                padding: 10px 20px;
+                                cursor: pointer;
+                                text-transform: uppercase;
+                            }
+                            
+                            .subscribe p {
+                                line-height: 2;
+                                margin-left: 50px;
+                            }
+                            
+                            @media (max-width: 991px) {
+                                .subscribe p {
+                                    margin: 30px 0 0;
+                                    text-align: center;
+                                }
+                            }
+                            
+                            .contact {
+                                padding-top: 100px;
+                                padding-bottom: 100px;
+                                position: relative;
+                            }
+                            
+                            .contact .content {
+                                display: flex;
+                                justify-content: space-between;
+                                position: absolute;
+                                TOP: 400PX;
+                                width: 100%;
+                            }
+                            
+                            @media (max-width: 767px) {
+                                .contact .content {
+                                    flex-direction: column;
+                                }
+                            }
+                            
+                            .contact .content form {
+                                flex-basis: 70%;
+                            }
+                            
+                            .contact .content form .main-input {
+                                display: block;
+                                width: 100%;
+                                padding: 20px;
+                                border: 1px solid #ccc;
+                                margin-bottom: 30px;
+                            }
+                            
+                            .contact .content form .main-input:focus {
+                                outline: none;
+                            }
+                            
+                            .contact .content form textarea.main-input {
+                                height: 200px;
+                            }
+                            
+                            .contact .content form input[type="submit"] {
+                                background-color: #19c8fa;
+                                color: white;
+                                padding: 20px;
+                                border: none;
+                                display: flex;
+                                margin-left: auto;
+                                text-transform: uppercase;
+                                cursor: pointer;
+                            }
+                            
+                            .contact .content .info {
+                                flex-basis: 25%;
+                            }
+                            
+                            @media (max-width: 767px) {
+                                .contact .content .info {
+                                    text-align: center;
+                                    margin-top: 30px;
+                                }
+                            }
+                            
+                            .contact .content .info h4 {
+                                text-transform: uppercase;
+                                margin-bottom: 10px;
+                                font-weight: 200;
+                                font-size: 18px;
+                                color: #000000;
+                            }
+                            
+                            .contact .content .info .phone {
+                                display: block;
+                                color: #777777b5;
+                                margin-bottom: 10px;
+                                font-size: small;
+                            }
+                            
+                            .contact .content .info address {
+                                color: #777;
+                                font-size: small;
+                                line-height: 2;
+                            }
+                            
+                            .footer {
+                                padding-top: 60px;
+                                padding-bottom: 60px;
+                                background-image: url("../images/subscribe.webp");
+                                background-size: cover;
+                                position: relative;
+                                color: white;
+                                text-align: center;
+                                margin-top: 500PX;
+                                height: 400PX;
+                                z-index: 6;
+                            }
+                            
+                            .footer::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgb(0 0 0 / 70%);
+                                z-index: -1;
+                            }
+                            
+                            .footer img {
+                                margin-bottom: 20px;
+                                width: 100px;
+                            }
+                            
+                            .footer p:not(.copyright) {
+                                text-transform: uppercase;
+                                padding: 20px;
+                                border-bottom: 1px solid white;
+                                font-size: 22px;
+                                width: fit-content;
+                                margin: 20px auto;
+                            }
+                            
+                            .footer .social-icons {
+                                margin-bottom: 60px;
+                            }
+                            
+                            .footer .social-icons i {
+                                padding: 10px 15px;
+                            }
+                            
+                            .footer .copyright {
+                                margin-top: 60px;
+                            }
+                            
+                            .footer .copyright span {
+                                font-weight: bold;
+                                color: #19c8fa;
+                            }
+                            
+                            @media (max-width: 900px) {
+                                body {
+                                    display: none !important;
+                                }
+                            }
